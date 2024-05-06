@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/cis2336-assignment4-mtpham29/FRONTEND/CSS/style.css">
+    <script src="/cis2336-assignment4-mtpham29/BACKEND/server.js"></script>
+    <title>Contact</title>
+</head>
+<body>
+    <header>
+        <h1><img src="/cis2336-assignment4-mtpham29/FRONTEND/IMAGE/logo.jpg" alt="logo" class="logo">UH Sugarland Cougar Cafe</h1>
+    </header>
+    <div class="navbar">
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="menu.html">Menu</a>
+        <a href="order.html">Order</a>
+        <a href="contact.html" class="active">Contact</a>
+    </div>
+        <h2>Contact Information</h2>
+        <form id="contactinfo">
+            <label for="name2">Name:</label><br>
+            <input type="text" id="name2" name="name2" required><br><br>
+            
+            <label for="email2">Email:</label><br>
+            <input type="email" id="email2" name="email2" required><br><br>
+            
+            <label for="phone2">Phone Number:</label>
+            <input type="text" id="phone2" name="phone2" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+        
+
+            <label for="message2">Questions, Comments, and Concerns:</label><br>
+            <textarea id="message2" name="message2" rows="4" required></textarea><br><br>
+            
+            <button type="submit">Submit</button>
+        </form>
+        <div id="map"></div>
+            <script>
+            (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
+              key: "AIzaSyBomKfGi2Kadw3ZL4TbBf3TSm4ygAt79Os",
+              v: "weekly",
+            });
+            </script>
+    </div>
+    <footer>
+        <p>&copy; 2024 University of Houston Sugarland</p>
+        <p>Needing help? Check out our <a href="contact.html">Contact Page</a>!</p>
+    </footer>
+</body>
+</html>

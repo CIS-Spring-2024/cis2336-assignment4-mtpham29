@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/cis2336-assignment4-mtpham29/FRONTEND/CSS/style.css">
+    <title>Menu</title>
+</head>
+<body>
+    <header>
+        <h1><img src="/cis2336-assignment4-mtpham29/FRONTEND/IMAGE/logo.jpg" alt="logo" class="logo">UH Sugarland Cougar Cafe</h1>
+    </header>
+    <div class="navbar">
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="menu.html" class="active">Menu</a>
+        <a href="order.html">Order</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <main>
+        <div class="menu_descriptions">
+        <section  class="breakfast">
+            <h2>Breakfast</h2>
+            <p>Served at 6am-11am. Breakfast before morning classes!</p>
+            <button class="menu_button" data-target="display_breakfast">View Breakfast Menu</button>
+        </section>
+        <section class="lunch">
+            <h2>Lunch</h2>
+            <p>Served at 11am-6pm. Quick lunch between classes!</p>
+            <button class="menu_button" data-target="display_lunch">View Lunch Menu</button>
+        </section>
+        <section class="dinner">
+            <h2>Dinner</h2>
+            <p>Served at 6pm-10pm. End the night stress free!</p>
+            <button class="menu_button" data-target="display_dinner">View Dinner Menu</button>
+        </section>
+        </div>
+        <div class="menu_pics">
+        <figure class="breakfast-pic">
+            <img src="/cis2336-assignment4-mtpham29/FRONTEND/IMAGE/breakfast.jpg" alt="Breakfast Food">
+        </figure>
+        <figure class="lunch-pic">
+            <img src="/cis2336-assignment4-mtpham29/FRONTEND/IMAGE/lunch.jpg" alt="Lunch Food">
+        </figure>
+        <figure class="dinner-pic">
+            <img src="/cis2336-assignment4-mtpham29/FRONTEND/IMAGE/dinner.jpg" alt="Dinner Food">
+        </figure>
+        </div>
+        <div id="display_breakfast" class = "relatedDiv" style="display: none;">
+            <p>Breakfast Menu!</p>
+            <ul>
+                <li>Waffles: Chocolate, Blueberry, and Gluten Free</li>
+                <li>Yogurt: Peach, Strawberry, Vanilla</li>
+                <li>Rice Porridge</li>
+                <li>Eggs: Scrambled, Sunny Side, Fried</li>
+            </ul>
+        </div>
+        <div id="display_lunch" class = "relatedDiv" style="display: none;">
+            <p>Lunch Menu!</p>
+            <ul>
+                <li>Tacos: Beef or Chicken</li>
+                <li>Spicy Curry</li>
+                <li>Empanadas: Beef, Chicken, Pork</li>
+                <li>Beef and Broccoli</li>
+            </ul>
+        </div>
+        <div id="display_dinner" class = "relatedDiv" style="display: none;">
+            <p>Dinner Menu!</p>
+            <ul>
+                <li>Salmon</li>
+                <li>Steak</li>
+                <li>Pizza: Pepperoni, Supreme, Cheese</li>
+                <li>Salad: House, Caesar, Chicken</li>
+            </ul>
+        </div>
+    </main>
+    <script src="/cis2336-assignment4-mtpham29/FRONTEND/JAVASCRIPT/script.js"></script>
+    <footer>
+        <p>&copy; 2024 University of Houston Sugarland</p>
+        <p>Needing help? Check out our <a href="contact.html">Contact Page</a>!</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/cis2336-assignment4-mtpham29/FRONTEND/CSS/style.css">
+    <title>Order</title>
+</head>
+<body>
+    <header>
+        <h1><img src="/cis2336-assignment4-mtpham29/FRONTEND/IMAGE/logo.jpg" alt="logo" class="logo">UH Sugarland Cougar Cafe</h1>
+    </header>
+    <div class="navbar">
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="menu.html">Menu</a>
+        <a href="order.html" class="active">Order</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <div class="container">
+        <h2>Order Form</h2>
+            <div>
+            <section class="breakfast">
+                <h2>Breakfast</h2>
+                <p>Order here for breakfast menu items! Breakfast is served between 6am-11pm.</p>
+                <button class="order_button" data-targettwo="display_breakfast_order">Breakfast Order</button>
+            </section>
+            <section class="lunch">
+                <h2>Lunch</h2>
+                <p>Order here for lunch menu items! Lunch is served between 11am-6pm.</p>
+                <button class="order_button" data-targettwo="display_lunch_order">Lunch Order</button>
+            </section>
+            <section class="dinner">
+                <h2>Dinner</h2>
+                <p>Order here for dinner menu items! Dinner is served between 6pm-10pm.</p>
+                <button class="order_button" data-targettwo="display_dinner_order">Dinner Order</button>
+            </section>
+            </div>
+            <div id="display_breakfast_order" class = "relatedDivtwo" style="display: none;">
+                <form id="breakfastorderForm" onsubmit="orderSubmitted(event, 'breakfast')">
+                    <div>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name">
+                        <span class="error" id="nameError"></span>
+                    </div>
+                    <div>
+                        <label for="phone">Confirmation Phone Number:</label>
+                        <input type="text" id="phone" name="phone" pattern="[0-9]{10}" title="Please provide a 10 digit phone number.">
+                        <span class="error" id="phoneError"></span>
+                    </div>
+                    <div>
+                        <label for="waffles">Waffles: $4.50<br>Quantity:</label>
+                        <select id="waffles" name="waffles" class="selectinput">
+                            <option value='0'>Select Type:</option>
+                            <option value="Chocolate Waffle">Chocolate</option>
+                            <option value="Blueberry Waffle">Blueberry</option>
+                            <option value="Gluten Free Waffle">Gluten Free</option>
+                        </select>
+                        <input type="number" id="wafflesquantity" name="wafflesquantity" min="0" max="10">
+                        <span class="error" id="waffleserror"></span>
+                    </div>
+                    <div>
+                        <label for="yogurt">Yogurt: $2<br>Quantity:</label>
+                        <select id="yogurt" name="yogurt" class="selectinput">
+                            <option value='0'>Select Type:</option>
+                            <option value="Peach Yogurt">Peach</option>
+                            <option value="Strawberry Yogurt">Strawberry</option>
+                            <option value="Vanilla Yogurt">Vanilla</option>
+                        </select>
+                        <input type="number" id="yogurtquantity" name="yogurtquantity" min="0" max="10">
+                        <span class="error" id="yogurterror"></span>
+                    </div>
+                    <div>
+                        <label for="riceporridge">Rice Porridge: $5<br>Quantity:</label>
+                        <select id="riceporridge" name="riceporridge" class="selectinput">
+                            <option value='0'>Select Type:</option>
+                            <option value="Chicken">Chicken</option>
+                            <option value="Beef">Beef</option>
+                        </select>
+                        <input type="number" id="riceporridgequantity" name="riceporridgequantity" min="0" max="10">
+                        <span class="error" id="riceporridgeerror"></span>
+                    </div>
+                    <div>
+                        <label for="eggs">Eggs: $3.50<br>Quantity:</label>
+                        <select id="eggs" name="eggs" class="selectinput">
+                            <option value='0'>Select Type:</option>
+                            <option value="Scrambled Eggs">Scrambled</option>
+                            <option value="Sunny Side Eggs">Sunny Side</option>
+                            <option value="Fried Eggs">Fried</option>
+                        </select>
+                        <input type="number" id="eggsquantity" name="eggsquantity" min="0" max="10">
+                        <span class="error" id="eggserror"></span>
+                    </div>
+                    <div>
+                        <button type="submit">Submit Order</button>
+                        <img src="/cis2336-assignment4-mtpham29/FRONTEND/IMAGE/breakfastorder.jpeg" alt="Waffles" id="orderpic">
+                    </div>
+                </form>
+            </div>
+            <div id="display_lunch_order" class = "relatedDivtwo" style="display: none;">
+                <form id="orderForm" onsubmit="orderSubmitted(event,'lunch')">
+                    <div>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name">
+                        <span class="error" id="nameError"></span>
+                    </div>
+                    <div>
+                        <label for="phone">Confirmation Phone Number:</label>
+                        <input type="text" id="phone" name="phone" pattern="[0-9]{10}" title="Please provide a 10 digit phone number.">
+                        <span class="error" id="phoneError"></span>
+                    </div>
+                    <div>
+                        <label for="tacos">Tacos: $2.50 for 3<br>Quantity:</label>
+                        <select id="tacos" name="tacos" class="selectinput">
+                            <option value='0'>Select Type:</option>
+                            <option value="Beef Tacos">Beef</option>
+                            <option value="Chicken Tacos">Chicken</option>
+                        </select>
+                        <input type="number" id="tacosquantity" name="tacosquantity" min="0" max="10">
+                        <span class="error" id="tacoserror"></span>
+                    </div>
+                    <div>
+                        <label for="spicycurry">Spicy Curry: $8<br>Quantity:</label>
+                        <select id="spicycurry" name="spicycurry" class="selectinput">
+                            <option value='0'>Select Type:</option>
+                            <option value="Mild">Mild</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Hot">Hot</option>
+                        </select>
+                        <input type="number" id="spicycurryquantity" name="spicycurryquantity" min="0" max="10">
+                        <span class="error" id="spicycurryerror"></span>
+                    </div>
+                    <div>
+                        <label for="empanadas">Empanadas: $6 for 2<br> Quantity:</label>
+                        <select id="empanadas" name="empanadas" class="selectinput">
+                            <option value='0'>Select Type:</option>
+                            <option value="Beef">Beef</option>
+                            <option value="Chicken">Chicken</option>
+                            <option value="Pork">Pork</option>
+                        </select>
+                        <input type="number" id="empanadasquantity" name="empanadasquantity" min="0" max="10">
+                        <span class="error" id="empanadaserror"></span>
+                    </div>
+                    <div>
+                        <label for="beefandbroccoli">Beef and Brocolli: $8<br>Quantity:</label>
+                        <select id="beefandbroccoli" name="beefandbroccoli" class="selectinput">
+                            <option value='0'>Select Type:</option>
+                            <option value="Rice">Rice</option>
+                            <option value="Noodle">Noodle</option>
+                        </select>
+                        <input type="number" id="beefandbroccoliquantity" name="beefandbroccoliquantity" min="0" max="10">
+                        <span class="error" id="beefandbroccolierror"></span>
+                    </div>
+                    <div>
+                        <button type="submit">Submit Order</button>
+                        <img src="/cis2336-assignment4-mtpham29/FRONTEND/IMAGE/lunchorder.jpg" alt="Tacos" id="orderpic">
+                    </div>
+                </form>
+            </div>
+            <div id="display_dinner_order" class = "relatedDivtwo" style="display: none;">
+                <form id="orderForm" onsubmit="orderSubmitted(event, 'dinner')">
+                    <div>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name">
+                        <span class="error" id="nameError"></span>
+                    </div>
+                    <div>
+                        <label for="phone">Confirmation Phone Number:</label>
+                        <input type="text" id="phone" name="phone" pattern="[0-9]{10}" title="Please provide a 10 digit phone number.">
+                        <span class="error" id="phoneError"></span>
+                    </div>
+                    <div>
+                        <label for="salmon">Salmon: $10<br>Quantity:</label>
+                        <select id="salmon" name="salmon" class="selectinput">
+                            <option value='0'>Select Type:</option>
+                            <option value="Grilled">Grilled</option>
+                            <option value="Baked">Baked</option>
+                        </select>
+                        <input type="number" id="salmonquantity" name="salmonquantity" min="0" max="10">
+                        <span class="error" id="salmonerror"></span>
+                    </div>
+                    <div>
+                        <label for="steak">Steak: $12<br>Quantity:</label>
+                        <select id="steak" name="steak" class="selectinput">
+                            <option value='0'>Select Type:</option>
+                            <option value="Filet Mignon">Filet Mignon</option>
+                            <option value="Ribeye">Ribeye</option>
+                            <option value="New York">New York</option>
+                        </select>
+                        <input type="number" id="steakquantity" name="steakquantity" min="0" max="10">
+                        <span class="error" id="steakerror"></span>
+                    </div>
+                    <div>
+                        <label for="pizza">Pizza: $1 slice, $5 whole pie<br>Quantity:</label>
+                        <select id="pizza" name="pizza" class="selectinput">
+                            <option value='0'>Select Type:</option>
+                            <option value="Cheese">Cheese</option>
+                            <option value="Pepperoni">Pepperoni</option>
+                            <option value="Supreme">Supreme</option>
+                        </select>
+                        <input type="number" id="pizzaquantity" name="pizzaquantity" min="0" max="10">
+                        <span class="error" id="pizzaerror"></span>
+                    </div>
+                    <div>
+                        <label for="salad">Salad: $5<br>Quantity:</label>
+                        <select id="salad" name="salad" class="selectinput">
+                            <option value='0'>Select Type:</option>
+                            <option value="House">House</option>
+                            <option value="Caesar">Caesar</option>
+                            <option value="Chicken">Chicken</option>
+                        </select>
+                        <input type="number" id="saladquantity" name="saladquantity" min="0" max="10">
+                        <span class="error" id="saladerror"></span>
+                    </div>
+                    <div>
+                        <button type="submit">Submit Order</button>
+                        <img src="/cis2336-assignment4-mtpham29/FRONTEND/IMAGE/dinnerorder.jpg" alt="Steak" id="orderpic">
+                    </div>
+                </form>
+            </div>
+        <script src="/cis2336-assignment4-mtpham29/FRONTEND/JAVASCRIPT/script.js"></script>
+    </div>
+    <footer>
+        <p>&copy; 2024 University of Houston Sugarland</p>
+        <p>Needing help? Check out our <a href="contact.html">Contact Page</a>!</p>
+    </footer>
+</body>
+
+</html>

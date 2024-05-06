@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/cis2336-assignment4-mtpham29/FRONTEND/CSS/style.css">
+    <title>Home</title>
+</head>
+<body>
+    <header>
+        <h1><img src="/cis2336-assignment4-mtpham29/FRONTEND/IMAGE/logo.jpg" alt="logo" class="logo">UH Sugarland Cougar Cafe</h1>
+    </header>
+    <div class="navbar">
+        <a href="home.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="menu.html">Menu</a>
+        <a href="order.html">Order</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <p>
+        <h2> Welcome to the Cougar Cafe! </h2>
+    </p>
+    
+    <main class="mainpage">
+        <div class="main_div">
+            <div class="first_div">
+            <h2>New Menu Items:</h2>
+            <article>
+                <p>Check out special added foods for this week!</p>
+                    <ul>
+                        <li>Beef and Brocolli</li>
+                        <li>Empanadas</li>
+                        <li>Spicy Curry</li>
+                        <li>Mashed Potatoes</li>
+                        <li>Strawberry Cheesecake</li>
+                    </ul>
+            </article>
+        </div>
+        <div class="second_div">
+            <figure>
+                <img src="/cis2336-assignment4-mtpham29/FRONTEND/IMAGE/homepage.jpg" alt="Cafeteria food">
+            </figure>
+        </div>
+        </div>
+            <article>
+                <h3>Empanadas</h3>
+                <p>Empanadas will come in three different options: beef, chicken, and vegetables. An optional dipping sauce is provided along with rice.</p>
+                <h3>Spicy Curry</h3>
+                <p>Spicy curry will have a meat and vegetarian option. This dish is served with rice and is one of our best sellers.</p>
+            </article>
+            <article>
+                <h4>Want to subscribe to daily menu updates?</h4>
+                <p>Click below to subscribe to UH Sugarland emails:</p>
+                <button onclick="showAlert()">Subscribe</button>
+            </article>
+            <script>
+                /*Button alert */
+                function showAlert(){
+                    alert("Thank you for subscribing!");
+                }
+            </script>
+    </main>
+    <footer>
+        <p>&copy; 2024 University of Houston Sugarland</p>
+        <p>Needing help? Check out our <a href="contact.html">Contact Page</a>!</p>
+    </footer>
+</body>
+</html>
